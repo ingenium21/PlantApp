@@ -1,0 +1,133 @@
+﻿{% extends 'layout.html' %}
+
+	{% block body %}
+
+<body>
+    <div class="proposal">
+        <h1>Your Proposal</h1>
+        <div>
+            <ul id="show-contact">
+                <!-- -->
+            </ul>
+        </div>
+        <div>
+            --------------------------------------------------
+        </div>
+        <div>
+            <ul id="show-cart">
+                <!-- -->
+            </ul>
+            <div>You have <span id="count-cart">X</span> items in your cart</div>
+            <div class="color-price">Total Cart:$<span id="total-cart" class="color-price"></span></div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='shoppingCart.js') }}">
+        </script>
+        <script>
+            ContactForm = {};
+            ContactForm.person = [];
+            ContactForm.loadForm = function () {
+                this.person = JSON.parse(localStorage.getItem("ContactForm"));
+            }
+
+            ContactForm.loadForm();
+            person = ContactForm.person;
+
+        </script>
+        <script>
+            function displayForm() {
+                var formArray = person;
+                var output = "";
+                output += "<li>"
+                    + "Client Name: "
+                    + formArray.name
+                    + " "
+                    + "</li>"
+                    + "<li>"
+                    + "Client email: "
+                    + formArray.email
+                    + " "
+                    + "</li>"
+                    + "<li>"
+                    + "Client Phone Number: "
+                    + formArray.phoneNumber
+                    + " "
+                    + "</li>"
+                    + "<li>"
+                    + "Proposed Address: "
+                    + "</li>"
+                    + "<li>"
+                    + formArray.addressLine1
+                    + " "
+                    + "</li>"
+                    + "<li>"
+                    + formArray.addressLine2
+                    + " "
+                    + "</li>"
+                    + "<li>"
+                    + formArray.city
+                    + " " + "," + " "
+                    + formArray.state
+                    + " " + "," + " "
+                    + formArray.postalCode
+                    + " "
+                    + "</li>"
+                $("#show-contact").html(output);
+            }
+            displayForm();
+        </script>
+
+        <script>
+            function displayCart() {
+                var cartArray = PA_shoppingCart.listCart();
+                var output = "";
+                for (var i in cartArray) {
+                    output += "<li>"
+                        + cartArray[i].name
+                        + " "
+                        /* + " <input class='item-count' type='number' data-name='"
+                            + cartArray[i].name
+                            + "' value='" + cartArray[i].count + "' >"*/
+                        + cartArray[i].count
+                        + " "
+                        + "x" + cartArray[i].price
+                        + " = " + " " + "$" + cartArray[i].total
+                        //+ " <button class='plus-item' data-name='" +
+                        //cartArray[i].name + "'>+</button>"
+                        //+ " <button class='subtract-item' data-name='"
+                        //+ cartArray[i].name + "'>-</button>"
+                        //+ "<button class='delete-item' data-name='"
+                        //+ cartArray[i].name + "'> X </button>"
+                        + "</li>"
+                }
+                $("#show-cart").html(output);
+                $("#count-cart").html(PA_shoppingCart.countCart())
+                $("#total-cart").html(PA_shoppingCart.totalCart());
+            }
+            PA_shoppingCart.loadCart();
+            displayCart();
+        </script>
+
+
+        <script>
+            var doc = new jsPDF();
+            var elementHandler = {
+                '#ignorePDF': function (element, renderer) {
+                    return true;
+                }
+            };
+            var source = window.document.getElementsByTagName("body")[0];
+            doc.fromHTML(
+                source,
+                15,
+                15,
+                {
+                    'width': 180, 'elementHandlers': elementHandler
+                });
+
+            doc.save("PlantProposal.pdf");
+        </script>
+    </div>
+</body>
+{% endblock %}

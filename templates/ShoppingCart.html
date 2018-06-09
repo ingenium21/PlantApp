@@ -1,0 +1,902 @@
+﻿{% extends 'layout.html' %}
+
+	{% block body %}
+
+<h1>Proposal Picker</h1>
+
+<body class="body">
+    <ul class="accordion">
+        <li>
+            <a class="toggle" href="javascript:void(0);">Designer or Landscape Architect</a>
+            <ul class="inner" style="display:none">
+                <li>
+                    <a href="#" class="toggle">Front Landscape Design</a>
+                    <ul class="inner">
+                        <li>
+                            <a href="#" class="toggle">Log size: ~0.5 Acre</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Just give me the idea, hand sketch is fine (~0.5 Acre FLD)" data-price="249">Just give me the idea, hand sketch is fine</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Professional Flat Plan to Scale, Design Legend and SOW Document (~0.5 Acre FLD)" data-price="399">Professional Flat Plan to Scale, Design Legend and SOW Document</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Add 3D Full Color Rendering (~0.5 Acre FLD)" data-price="249">Add 3D Full Color Rendering </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Log size: .5-1 Acre</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Just give me the idea, hand sketch is fine (.5-1 Acre FLD)" data-price="299">Just give me the idea, hand sketch is fine</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Professional Flat Plan to Scale, Design Legend and SOW Document (.5-1 Acre FLD)" data-price="449">Professional Flat Plan to Scale, Design Legend and SOW Document</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Add 3D Full Color Rendering (.5-1 Acre FLD)" data-price="299">Add 3D Full Color Rendering </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Log size: +1 Acre</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Just give me the idea, hand sketch is fine (+1 Acre FLD)" data-price="349">Just give me the idea, hand sketch is fine </a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Professional Flat Plan to Scale, Design Legend and SOW Document (+1 Acre FLD)" data-price="549">Professional Flat Plan to Scale, Design Legend and SOW Document</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Add 3D Full Color Rendering (+1 Acre FLD)" data-price="349">Add 3D Full Color Rendering </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Master Landscape Plan</a>
+                    <ul class="inner">
+                        <li>
+                            <a href="#" class="toggle">Log size: ~0.5 Acre</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Just give me the idea, hand sketch is fine (~0.5 Acre MLP)" data-price="249">Just give me the idea, hand sketch is fine</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Professional Flat Plan to Scale, Design Legend and SOW Document (~0.5 Acre MLP)" data-price="399">Professional Flat Plan to Scale, Design Legend and SOW Document</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Add 3D Full Color Rendering (~0.5 Acre MLP)" data-price="249">Add 3D Full Color Rendering </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Log size: .5-1 Acre</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Just give me the idea, hand sketch is fine (.5-1 Acre MLP)" data-price="299">Just give me the idea, hand sketch is fine</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Professional Flat Plan to Scale, Design Legend and SOW Document (.5-1 Acre MLP)" data-price="449">Professional Flat Plan to Scale, Design Legend and SOW Document</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Add 3D Full Color Rendering (.5-1 Acre MLP)" data-price="299">Add 3D Full Color Rendering </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Log size: +1 Acre</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Just give me the idea, hand sketch is fine (+1 Acre MLP)" data-price="349">Just give me the idea, hand sketch is fine </a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Professional Flat Plan to Scale, Design Legend and SOW Document (+1 Acre MLP)" data-price="549">Professional Flat Plan to Scale, Design Legend and SOW Document</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Add 3D Full Color Rendering (+1 Acre MLP)" data-price="349">Add 3D Full Color Rendering </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Outdoor Living Area</a>
+                    <ul class="inner">
+                        <li>
+                            <a href="#" class="toggle">Log size: ~0.5 Acre</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Just give me the idea, hand sketch is fine (~0.5 ACre OLA)" data-price="249">Just give me the idea, hand sketch is fine</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Professional Flat Plan to Scale, Design Legend and SOW Document (~0.5 ACre OLA)" data-price="399">Professional Flat Plan to Scale, Design Legend and SOW Document</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Add 3D Full Color Rendering (~0.5 ACre OLA)" data-price="249">Add 3D Full Color Rendering </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Log size: .5-1 Acre</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Just give me the idea, hand sketch is fine (.5-1 ACre OLA)" data-price="299">Just give me the idea, hand sketch is fine</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Professional Flat Plan to Scale, Design Legend and SOW Document (.5-1 ACre OLA)" data-price="449">Professional Flat Plan to Scale, Design Legend and SOW Document</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Add 3D Full Color Rendering (.5-1 ACre OLA)" data-price="299">Add 3D Full Color Rendering </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Log size: +1 Acre</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Just give me the idea, hand sketch is fine (+1 ACre OLA)" data-price="349">Just give me the idea, hand sketch is fine</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Professional Flat Plan to Scale, Design Legend and SOW Document (+1 ACre OLA)" data-price="549">Professional Flat Plan to Scale, Design Legend and SOW Document</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Add 3D Full Color Rendering (+1 ACre OLA)" data-price="349">Add 3D Full Color Rendering </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Deck, Patio, or Backyard Design</a>
+                    <ul class="inner">
+                        <li>
+                            <a href="#" class="toggle">Log size: ~0.5 Acre</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Just give me the idea, hand sketch is fine (~0.5 Acre DPBD)" data-price="249">Just give me the idea, hand sketch is fine</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Professional Flat Plan to Scale, Design Legend and SOW Document (~0.5 Acre DPBD)" data-price="399">Professional Flat Plan to Scale, Design Legend and SOW Document</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Add 3D Full Color Rendering (~0.5 Acre DPBD)" data-price="249">Add 3D Full Color Rendering </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Log size: .5-1 Acre</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Just give me the idea, hand sketch is fine (.5-1 Acre DPBD)" data-price="299">Just give me the idea, hand sketch is fine</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Professional Flat Plan to Scale, Design Legend and SOW Document (.5-1 Acre DPBD)" data-price="449">Professional Flat Plan to Scale, Design Legend and SOW Document</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Add 3D Full Color Rendering (.5-1 Acre DPBD)" data-price="299">Add 3D Full Color Rendering </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Log size: +1 Acre</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Just give me the idea, hand sketch is fine (+1 Acre DPBD)" data-price="349">Just give me the idea, hand sketch is fine</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Professional Flat Plan to Scale, Design Legend and SOW Document (+1 Acre DPBD)" data-price="549">Professional Flat Plan to Scale, Design Legend and SOW Document</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Add 3D Full Color Rendering (+1 Acre DPBD)" data-price="349">Add 3D Full Color Rendering </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Pool, Pool area, Jacuzzi, or Spa</a>
+                    <ul class="inner">
+                        <li>
+                            <a href="#" class="toggle">Log size: ~0.5 Acre</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Just give me the idea, hand sketch is fine (~.5 Acre PPJS)" data-price="249">Just give me the idea, hand sketch is fine</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Professional Flat Plan to Scale, Design Legend and SOW Document (~.5 Acre PPJS)" data-price="399">Professional Flat Plan to Scale, Design Legend and SOW Document</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Add 3D Full Color Rendering (~.5 Acre PPJS)" data-price="249">Add 3D Full Color Rendering </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Log size: .5-1 Acre</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Just give me the idea, hand sketch is fine (.5-1 Acre PPJS)" data-price="299">Just give me the idea, hand sketch is fine</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Professional Flat Plan to Scale, Design Legend and SOW Document (.5-1 Acre PPJS)" data-price="449">Professional Flat Plan to Scale, Design Legend and SOW Document</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Add 3D Full Color Rendering (.5-1 Acre PPJS)" data-price="299">Add 3D Full Color Rendering </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Log size: +1 Acre</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Just give me the idea, hand sketch is fine (+1 Acre PPJS)" data-price="349">Just give me the idea, hand sketch is fine</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Professional Flat Plan to Scale, Design Legend and SOW Document (+1 Acre PPJS)" data-price="549">Professional Flat Plan to Scale, Design Legend and SOW Document</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Add 3D Full Color Rendering (+1 Acre PPJS)" data-price="349">Add 3D Full Color Rendering </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="toggle" href="javascript:void(0);">Landscape Planting</a>
+            <ul class="inner" style="display:none">
+                <li>
+                    <a href="#" class="toggle">Evergreen Trees</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (up to 6')" data-price="1">Up to 6 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (6-8')" data-price="2">6 to 8 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (8-10')" data-price="3">8 to 10 feet </a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (10-12')" data-price="4">10 to 12 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (12-14')" data-price="5">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Deciduous Trees</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (up to 6')" data-price="1">Up to 6 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (6-8')" data-price="2">6 to 8 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (8-10')" data-price="3">8 to 10 feet </a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (10-12')" data-price="4">10 to 12 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (12-14')" data-price="5">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Shrubs and Landscape Plants</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="shrubs/Landscape Plants (up to 1 Gallon)" data-price="6">Up to 1 Gallon</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="1-3 Gallon Shrub, Grass, or Perennial" data-price="7">1-3 Gallon Shrub, Grass, or Perennial</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="5-7 Gallon Shrub (Med)" data-price="8">5-7 Gallon Shrub (Med)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="7-10 Gallon Shrub (Med-Lg)" data-price="9">7-10 Gallon Shrub (Med-Lg)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="10-15 Gallon  Shrub (Lg)" data-price="1">12 to 14 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="15-25 Gallon Shrub (XL)" data-price="2">5-7 Gallon Shrub (Med)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="B&B up to 24in (XXL)" data-price="3">7-10 Gallon Shrub (Med-Lg)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="B&B 24-48in (Specialty)" data-price="4">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="toggle" href="javascript:void(0);">Hardscaping</a>
+            <ul class="inner" style="display:none">
+                <li>
+                    <a href="#" class="toggle">Walkway 3ft</a>
+                    <ul class="inner" style="display:none">
+                        <li>
+                            <a href="#" class="toggle">Level 1in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (W3 L1)" data-price="1">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (W3 L1)" data-price="1">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (W3 L1)" data-price="1">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (W3 L1)" data-price="1">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 2in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (W3 L2)" data-price="2">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (W3 L2)" data-price="2">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (W3 L2)" data-price="2">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (W3 L2)" data-price="2">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 3in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (W3 L3)" data-price="3">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (W3 L3)" data-price="3">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (W3 L3)" data-price="3">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (W3 L3)" data-price="3">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 4in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (W3 L4)" data-price="4">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (W3 L4)" data-price="4">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (W3 L4)" data-price="4">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (W3 L4)" data-price="4">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 5in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (W3 L5)" data-price="5">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (W3 L5)" data-price="5">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (W3 L5)" data-price="5">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (W3 L5)" data-price="5">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Walkway 4ft</a>
+                    <ul class="inner" style="display:none">
+                        <li>
+                            <a href="#" class="toggle">Level 1in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (W4 L1)" data-price="1">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (W4 L1)" data-price="1">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (W4 L1)" data-price="1">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (W4 L1)" data-price="1">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 2in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (W4 L2)" data-price="2">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (W4 L2)" data-price="2">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (W4 L2)" data-price="2">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (W4 L2)" data-price="2">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 3in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (W4 L3)" data-price="3">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (W4 L3)" data-price="3">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (W4 L3)" data-price="3">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (W4 L3)" data-price="3">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 4in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (W4 L4)" data-price="4">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (W4 L4)" data-price="4">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (W4 L4)" data-price="4">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (W4 L4)" data-price="4">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 5in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (W4 L5)" data-price="5">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (W4 L5)" data-price="5">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (W4 L5)" data-price="5">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (W4 L5)" data-price="5">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">walkway 5ft</a>
+                    <ul class="inner" style="display:none">
+                        <li>
+                            <a href="#" class="toggle">Level 1in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (W5 L1)" data-price="1">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (W5 L1)" data-price="1">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (W5 L1)" data-price="1">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (W5 L1)" data-price="1">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 2in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (W5 L2)" data-price="2">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (W5 L2)" data-price="2">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (W5 L2)" data-price="2">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (W5 L2)" data-price="2">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 3in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (W5 L3)" data-price="3">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (W5 L3)" data-price="3">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (W5 L3)" data-price="3">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (W5 L3)" data-price="3">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 4in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (W5 L4)" data-price="4">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (W5 L4)" data-price="4">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (W5 L4)" data-price="4">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (W5 L4)" data-price="4">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 5in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (W5 L5)" data-price="5">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (W5 L5)" data-price="5">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (W5 L5)" data-price="5">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (W5 L5)" data-price="5">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Patio</a>
+                    <ul class="inner" style="display:none">
+                        <li>
+                            <a href="#" class="toggle">Level 1in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (Po L1)" data-price="1">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (Po L1)" data-price="1">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (Po L1)" data-price="1">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (Po L1)" data-price="1">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 2in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (Po L2)" data-price="2">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (Po L2)" data-price="2">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (Po L2)" data-price="2">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (Po L2)" data-price="2">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 3in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (Po L3)" data-price="3">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (Po L3)" data-price="3">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (Po L3)" data-price="3">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (Po L3)" data-price="3">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 4in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (Po L4)" data-price="4">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (Po L4)" data-price="4">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (Po L4)" data-price="4">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (Po L4)" data-price="4">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 5in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (Po L5)" data-price="5">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (Po L5)" data-price="5">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (Po L5)" data-price="5">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (Po L5)" data-price="5">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Pool Deck</a>
+                    <ul class="inner" style="display:none">
+                        <li>
+                            <a href="#" class="toggle">Level 1in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (PD L1)" data-price="1">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (PD L1)" data-price="1">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (PD L1)" data-price="1">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (PD L1)" data-price="1">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 2in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (PD L2)" data-price="2">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (PD L2)" data-price="2">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (PD L2)" data-price="2">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (PD L2)" data-price="2">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 3in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (PD L3)" data-price="3">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (PD L3)" data-price="3">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (PD L3)" data-price="3">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (PD L3)" data-price="3">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 4in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (PD L4)" data-price="4">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (PD L4)" data-price="4">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (PD L4)" data-price="4">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (PD L4)" data-price="4">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 5in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (PD L5)" data-price="5">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (PD L5)" data-price="5">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (PD L5)" data-price="5">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (PD L5)" data-price="5">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Driveway</a>
+                    <ul class="inner" style="display:none">
+                        <li>
+                            <a href="#" class="toggle">Level 1in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (DY L1)" data-price="1">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (DY L1)" data-price="1">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (DY L1)" data-price="1">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (DY L1)" data-price="1">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 2in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (DY L2)" data-price="2">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (DY L2)" data-price="2">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (DY L2)" data-price="2">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (DY L2)" data-price="2">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 3in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (DY L3)" data-price="3">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (DY L3)" data-price="3">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (DY L3)" data-price="3">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (DY L3)" data-price="3">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 4in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (DY L4)" data-price="4">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (DY L4)" data-price="4">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (DY L4)" data-price="4">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (DY L4)" data-price="4">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 5in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (DY L5)" data-price="5">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (DY L5)" data-price="5">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (DY L5)" data-price="5">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (DY L5)" data-price="5">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Retaining Wall</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="Pavers (RETWAL)" data-price="5">Pavers</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (RETWAL)" data-price="5">Stone and Stucco</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (RETWAL)" data-price="5">Brushed Concrete</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (RETWAL)" data-price="5">Stamped Concrete</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Double-Sided 16in Seating Wall</a>
+                    <ul class="inner" style="display:none">
+                        <li>
+                            <a href="#" class="toggle">Level 1in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (DSSW L1)" data-price="1">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (DSSW L1)" data-price="1">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (DSSW L1)" data-price="1">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (DSSW L1)" data-price="1">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 2in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (DSSW L2)" data-price="2">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (DSSW L2)" data-price="2">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (DSSW L2)" data-price="2">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (DSSW L2)" data-price="2">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 3in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (DSSW L3)" data-price="3">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (DSSW L3)" data-price="3">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (DSSW L3)" data-price="3">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (DSSW L3)" data-price="3">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 4in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (DSSW L4)" data-price="4">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (DSSW L4)" data-price="4">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (DSSW L4)" data-price="4">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (DSSW L4)" data-price="4">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">Level 5in</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (DSSW L5)" data-price="5">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (DSSW L5)" data-price="5">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (DSSW L5)" data-price="5">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (DSSW L5)" data-price="5">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle">CAP</a>
+                            <ul class="inner">
+                                <li><a class="add-to-cart" href="#" data-name="Pavers (DSSW CAP)" data-price="5">Pavers</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stone and Stucco (DSSW CAP)" data-price="5">Stone and Stucco</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Brushed Concrete (DSSW CAP)" data-price="5">Brushed Concrete</a></li>
+                                <li><a class="add-to-cart" href="#" data-name="Stamped Concrete (DSSW CAP)" data-price="5">Stamped Concrete</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Landing into house</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="shrubs/Landscape Plants (up to 1 Gallon)" data-price="6">Up to 1 Gallon</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="1-3 Gallon Shrub, Grass, or Perennial" data-price="7">1-3 Gallon Shrub, Grass, or Perennial</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="5-7 Gallon Shrub (Med)" data-price="8">5-7 Gallon Shrub (Med)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="7-10 Gallon Shrub (Med-Lg)" data-price="9">7-10 Gallon Shrub (Med-Lg)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="10-15 Gallon  Shrub (Lg)" data-price="1">12 to 14 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="15-25 Gallon Shrub (XL)" data-price="2">5-7 Gallon Shrub (Med)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="B&B up to 24in (XXL)" data-price="3">7-10 Gallon Shrub (Med-Lg)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="B&B 24-48in (Specialty)" data-price="4">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Firepit</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="shrubs/Landscape Plants (up to 1 Gallon)" data-price="6">Up to 1 Gallon</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="1-3 Gallon Shrub, Grass, or Perennial" data-price="7">1-3 Gallon Shrub, Grass, or Perennial</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="5-7 Gallon Shrub (Med)" data-price="8">5-7 Gallon Shrub (Med)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="7-10 Gallon Shrub (Med-Lg)" data-price="9">7-10 Gallon Shrub (Med-Lg)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="10-15 Gallon  Shrub (Lg)" data-price="1">12 to 14 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="15-25 Gallon Shrub (XL)" data-price="2">5-7 Gallon Shrub (Med)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="B&B up to 24in (XXL)" data-price="3">7-10 Gallon Shrub (Med-Lg)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="B&B 24-48in (Specialty)" data-price="4">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Fireplace</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="shrubs/Landscape Plants (up to 1 Gallon)" data-price="6">Up to 1 Gallon</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="1-3 Gallon Shrub, Grass, or Perennial" data-price="7">1-3 Gallon Shrub, Grass, or Perennial</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="5-7 Gallon Shrub (Med)" data-price="8">5-7 Gallon Shrub (Med)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="7-10 Gallon Shrub (Med-Lg)" data-price="9">7-10 Gallon Shrub (Med-Lg)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="10-15 Gallon  Shrub (Lg)" data-price="1">12 to 14 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="15-25 Gallon Shrub (XL)" data-price="2">5-7 Gallon Shrub (Med)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="B&B up to 24in (XXL)" data-price="3">7-10 Gallon Shrub (Med-Lg)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="B&B 24-48in (Specialty)" data-price="4">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="toggle" href="javascript:void(0);">Outdoor Structures</a>
+            <ul class="inner" style="display:none">
+                <li>
+                    <a href="#" class="toggle">Deck and Railing</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (up to 6')" data-price="1">Up to 6 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (6-8')" data-price="2">6 to 8 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (8-10')" data-price="3">8 to 10 feet </a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (10-12')" data-price="4">10 to 12 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (12-14')" data-price="5">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Pergola</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (up to 6')" data-price="1">Up to 6 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (6-8')" data-price="2">6 to 8 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (8-10')" data-price="3">8 to 10 feet </a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (10-12')" data-price="4">10 to 12 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (12-14')" data-price="5">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Pavillion</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="shrubs/Landscape Plants (up to 1 Gallon)" data-price="6">Up to 1 Gallon</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="1-3 Gallon Shrub, Grass, or Perennial" data-price="7">1-3 Gallon Shrub, Grass, or Perennial</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="5-7 Gallon Shrub (Med)" data-price="8">5-7 Gallon Shrub (Med)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="7-10 Gallon Shrub (Med-Lg)" data-price="9">7-10 Gallon Shrub (Med-Lg)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="10-15 Gallon  Shrub (Lg)" data-price="1">12 to 14 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="15-25 Gallon Shrub (XL)" data-price="2">5-7 Gallon Shrub (Med)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="B&B up to 24in (XXL)" data-price="3">7-10 Gallon Shrub (Med-Lg)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="B&B 24-48in (Specialty)" data-price="4">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="toggle" href="javascript:void(0);">Outdoor Kitchen</a>
+            <ul class="inner" style="display:none">
+                <li>
+                    <a href="#" class="toggle">Countertop</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (up to 6')" data-price="1">Up to 6 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (6-8')" data-price="2">6 to 8 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (8-10')" data-price="3">8 to 10 feet </a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (10-12')" data-price="4">10 to 12 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (12-14')" data-price="5">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Style of Construction</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (up to 6')" data-price="1">Up to 6 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (6-8')" data-price="2">6 to 8 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (8-10')" data-price="3">8 to 10 feet </a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (10-12')" data-price="4">10 to 12 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (12-14')" data-price="5">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Appliances</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="shrubs/Landscape Plants (up to 1 Gallon)" data-price="6">Up to 1 Gallon</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="1-3 Gallon Shrub, Grass, or Perennial" data-price="7">1-3 Gallon Shrub, Grass, or Perennial</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="5-7 Gallon Shrub (Med)" data-price="8">5-7 Gallon Shrub (Med)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="7-10 Gallon Shrub (Med-Lg)" data-price="9">7-10 Gallon Shrub (Med-Lg)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="10-15 Gallon  Shrub (Lg)" data-price="1">12 to 14 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="15-25 Gallon Shrub (XL)" data-price="2">5-7 Gallon Shrub (Med)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="B&B up to 24in (XXL)" data-price="3">7-10 Gallon Shrub (Med-Lg)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="B&B 24-48in (Specialty)" data-price="4">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="toggle" href="javascript:void(0);">Landscape Lighting</a>
+            <ul class="inner" style="display:none">
+                <li>
+                    <a href="#" class="toggle">Low Voltage Lighting</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (up to 6')" data-price="1">Up to 6 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (6-8')" data-price="2">6 to 8 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (8-10')" data-price="3">8 to 10 feet </a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (10-12')" data-price="4">10 to 12 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (12-14')" data-price="5">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="toggle" href="javascript:void(0);">Irrigation</a>
+            <ul class="inner" style="display:none">
+                <li>
+                    <a href="#" class="toggle">Lawn Area to Irrigate</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (up to 6')" data-price="1">Up to 6 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (6-8')" data-price="2">6 to 8 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (8-10')" data-price="3">8 to 10 feet </a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (10-12')" data-price="4">10 to 12 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (12-14')" data-price="5">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Landscaped Area to Irrigate</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (up to 6')" data-price="1">Up to 6 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (6-8')" data-price="2">6 to 8 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (8-10')" data-price="3">8 to 10 feet </a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (10-12')" data-price="4">10 to 12 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (12-14')" data-price="5">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="toggle" href="javascript:void(0);">Water Feature</a>
+            <ul class="inner" style="display:none">
+                <li>
+                    <a href="#" class="toggle">Pond with Rock Border</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (up to 6')" data-price="1">Up to 6 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (6-8')" data-price="2">6 to 8 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (8-10')" data-price="3">8 to 10 feet </a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (10-12')" data-price="4">10 to 12 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (12-14')" data-price="5">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Waterfall</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (up to 6')" data-price="1">Up to 6 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (6-8')" data-price="2">6 to 8 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (8-10')" data-price="3">8 to 10 feet </a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (10-12')" data-price="4">10 to 12 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (12-14')" data-price="5">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="toggle" href="javascript:void(0);">Other Factors</a>
+            <ul class="inner" style="display:none">
+                <li>
+                    <a href="#" class="toggle">If Access is difficult</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (up to 6')" data-price="1">Up to 6 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (6-8')" data-price="2">6 to 8 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (8-10')" data-price="3">8 to 10 feet </a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (10-12')" data-price="4">10 to 12 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Evergreen Trees (12-14')" data-price="5">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">if Drainage is poor</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (up to 6')" data-price="1">Up to 6 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (6-8')" data-price="2">6 to 8 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (8-10')" data-price="3">8 to 10 feet </a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (10-12')" data-price="4">10 to 12 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="Deciduous Trees (12-14')" data-price="5">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="toggle">Demolition Needed</a>
+                    <ul class="inner">
+                        <li><a class="add-to-cart" href="#" data-name="shrubs/Landscape Plants (up to 1 Gallon)" data-price="6">Up to 1 Gallon</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="1-3 Gallon Shrub, Grass, or Perennial" data-price="7">1-3 Gallon Shrub, Grass, or Perennial</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="5-7 Gallon Shrub (Med)" data-price="8">5-7 Gallon Shrub (Med)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="7-10 Gallon Shrub (Med-Lg)" data-price="9">7-10 Gallon Shrub (Med-Lg)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="10-15 Gallon  Shrub (Lg)" data-price="1">12 to 14 feet</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="15-25 Gallon Shrub (XL)" data-price="2">5-7 Gallon Shrub (Med)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="B&B up to 24in (XXL)" data-price="3">7-10 Gallon Shrub (Med-Lg)</a></li>
+                        <li><a class="add-to-cart" href="#" data-name="B&B 24-48in (Specialty)" data-price="4">12 to 14 feet</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div>
+        <button id="submit-cart">Submit</button>
+    </div>
+    <div>
+        <button id="clear-cart">Clear Cart</button>
+    </div>
+    <div>
+        <ul id="show-cart">
+            <!-- -->
+        </ul>
+        <div>You have <span id="count-cart">X</span> items in your cart</div>
+        <div>Total Cart:$<span id="total-cart"></span></div>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='shoppingCart.js') }}">
+    </script>
+
+    <script>
+        //collapsible script
+        $('.toggle').click(function (e) {
+            e.preventDefault();
+
+            var $this = $(this);
+
+            if ($this.next().hasClass('show')) {
+                $this.next().removeClass('show');
+                $this.next().slideUp(350);
+            } else {
+                $this.parent().parent().find('li .inner').removeClass('show');
+                $this.parent().parent().find('li .inner').slideUp(350);
+                $this.next().toggleClass('show');
+                $this.next().slideToggle(350);
+            }
+        });
+    </script>
+
+    <script>
+        $(".add-to-cart").click(function (event) {
+            event.preventDefault();
+            var name = $(this).attr("data-name");
+            var price = Number($(this).attr("data-price"));
+
+            PA_shoppingCart.addItemToCart(name, price, 1);
+            displayCart();
+        });
+
+        $("#clear-cart").click(function (event) {
+            PA_shoppingCart.clearCart();
+            displayCart();
+        });
+
+        $("#submit-cart").click(function (event) {
+            PA_shoppingCart.saveCart();
+            window.location.href = '/Submit-Cart'
+        });
+
+        function displayCart() {
+            var cartArray = PA_shoppingCart.listCart();
+            var output = "";
+            for (var i in cartArray) {
+                output += "<li>"
+                    + cartArray[i].name
+                    + " "
+                    + " <input class='item-count' type='number' data-name='"
+                    + cartArray[i].name
+                    + "' value='" + cartArray[i].count + "' >"
+                    + " x " + cartArray[i].price
+                    + " = " + " " + "$" + cartArray[i].total
+                    + " <button class='plus-item' data-name='" +
+                    cartArray[i].name + "'>+</button>"
+                    + " <button class='subtract-item' data-name='"
+                    + cartArray[i].name + "'>-</button>"
+                    + "<button class='delete-item' data-name='"
+                    + cartArray[i].name + "'> X </button>"
+                    + "</li>"
+            }
+            $("#show-cart").html(output);
+            $("#count-cart").html(PA_shoppingCart.countCart())
+            $("#total-cart").html(PA_shoppingCart.totalCart());
+        }
+
+        $("#show-cart").on("click", ".delete-item", function (event) {
+            var name = $(this).attr("data-name");
+            PA_shoppingCart.removeItemFromCartAll(name);
+            displayCart();
+        });
+
+        $("#show-cart").on("click", ".subtract-item", function (event) {
+            var name = $(this).attr("data-name");
+            PA_shoppingCart.removeItemFromCart(name);
+            displayCart();
+        });
+
+        $("#show-cart").on("click", ".plus-item", function (event) {
+            var name = $(this).attr("data-name");
+            PA_shoppingCart.addItemToCart(name, 0, 1);
+            displayCart();
+        });
+
+        $("#show-cart").on("change", ".item-count", function (event) {
+            var name = $(this).attr("data-name");
+            var count = Number($(this).val());
+            PA_shoppingCart.setCountForItem(name, count);
+            displayCart();
+        });
+
+        displayCart();
+
+
+
+    </script>
+</body>
+{% endblock %}

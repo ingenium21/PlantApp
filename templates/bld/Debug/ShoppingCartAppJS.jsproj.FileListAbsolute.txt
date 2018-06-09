@@ -1,0 +1,17 @@
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bin\Debug\ReverseMap\resources.pri
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bin\Debug\AppxManifest.xml
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bin\Debug\ShoppingCartAppJS.build.appxrecipe
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bld\Debug\ResourceHandlingTask.state
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bld\Debug\priconfig.xml
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bld\Debug\priconfig.xml.intermediate
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bld\Debug\layout.resfiles
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bld\Debug\layout.resfiles.intermediate
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bld\Debug\resources.resfiles
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bld\Debug\resources.resfiles.intermediate
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bld\Debug\pri.resfiles
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bld\Debug\pri.resfiles.intermediate
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bld\Debug\qualifiers.txt
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bld\Debug\qualifiers.txt.intermediate
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+c:\users\renato\documents\visual studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bld\Debug\ProjectArchitectures.txt
+C:\Users\renato\Documents\Visual Studio 2017\Projects\ShoppingCartAppJS\ShoppingCartAppJS\bld\Debug\ShoppingCartAppJS.jsproj.CoreCompileInputs.cache
