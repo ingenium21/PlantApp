@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-from data import Articles
 
 app = Flask(__name__)
 
