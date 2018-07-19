@@ -3,26 +3,28 @@
 // Shopping Cart Functions
 var PA_shoppingCart = {};
 
-PA_shoppingCart.cart = [name, 0, 0]; //the cart array
+PA_shoppingCart.cart = []; //the cart array
 
 // will display name, price, and count
-PA_shoppingCart.Item = function (name, price, count) {
+PA_shoppingCart.Item = function (grandparent, parent, name, price, count) {
+    this.grandparent = grandparent;
+    this.parent = parent;
     this.name = name;
     this.price = price;
     this.count = count;
 };
 
 // addItemToCart Function
-PA_shoppingCart.addItemToCart = function (name, price, count) { // add item to cart
+PA_shoppingCart.addItemToCart = function (grandparent, parent, name, price, count) { // add item to cart
     for (var i in this.cart) {
         if (this.cart[i].name === name) {
             this.cart[i].count += count;
-            PA_shoppingCart.saveCart();
+            this.saveCart();
             return;
         }
     }
-    var item = new PA_shoppingCart.Item(name, price, count);
-    PA_shoppingCart.cart.push(item);
+    var item = new PA_shoppingCart.Item(grandparent, parent, name, price, count);
+    this.cart.push(item);
     this.saveCart();
 };
 

@@ -11,9 +11,9 @@ from functools import wraps
 app = Flask(__name__)
 
 # Config MySQL
-app.config['MYSQL_HOST'] = 'hostname'
-app.config['MYSQL_USER'] = 'username'
-app.config['MYSQL_PASSWORD'] = 'password'
+app.config['MYSQL_HOST'] = ''
+app.config['MYSQL_USER'] = ''
+app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'plantapp'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 #init MySQL
@@ -102,7 +102,7 @@ def signup():
 		cur = mysql.connection.cursor()
 
 		#execute query
-		cur.execute("INSERT INTO users(username, email, password) VALUES(%s, %s, %s)", (username, email, password))
+		cur.execute("INSERT INTO users(name,username, email, password) VALUES(%s,%s, %s, %s)", (name, username, email, password))
 
 		#commit to DB
 		mysql.connection.commit()
