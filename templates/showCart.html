@@ -1,0 +1,277 @@
+{% extends 'layout.html' %}
+
+	{% block body %}
+
+<body>
+    <div class="proposal">
+        <h1>Your Proposal</h1>
+        <div>
+            <ul id="show-contact">
+                <!-- -->
+            </ul>
+        </div>
+        <div>
+            --------------------------------------------------
+        </div>
+        <div>
+            <ul id="show-cart">
+                <!-- -->
+            </ul>
+            <div>You have <span id="count-cart">X</span> items in your cart</div>
+            <div class="color-price">Total Cart:$<span id="total-cart" class="color-price"></span></div>
+        </div>
+        <div>
+            <button id="submit-cart">Submit and print</button>
+        </div>
+        <div>
+            <button id="go-back">go back</button>
+        </div>
+
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script> -->
+        <script type="text/javascript" src="{{ url_for('static', filename='shoppingCart.js') }}">
+        </script>
+        <script>
+            ContactForm = {};
+            ContactForm.person = [];
+            ContactForm.loadForm = function () {
+                this.person = JSON.parse(localStorage.getItem("ContactForm"));
+            }
+
+            ContactForm.loadForm();
+            person = ContactForm.person;
+
+        </script>
+        <script>
+            function displayForm() {
+                var formArray = person;
+                var output = "";
+                output += "<li>"
+                    + "Client Name: "
+                    + formArray.name
+                    + " "
+                    + "</li>"
+                    + "<li>"
+                    + "Client email: "
+                    + formArray.email
+                    + " "
+                    + "</li>"
+                    + "<li>"
+                    + "Client Phone Number: "
+                    + formArray.phoneNumber
+                    + " "
+                    + "</li>"
+                    + "<li>"
+                    + "Proposed Address: "
+                    + "</li>"
+                    + "<li>"
+                    + formArray.addressLine1
+                    + " "
+                    + "</li>"
+                    + "<li>"
+                    + formArray.addressLine2
+                    + " "
+                    + "</li>"
+                    + "<li>"
+                    + formArray.city
+                    + " " + "," + " "
+                    + formArray.state
+                    + " " + "," + " "
+                    + formArray.postalCode
+                    + " "
+                    + "</li>"
+                $("#show-contact").html(output);
+            }
+            displayForm();
+        </script>
+
+        <!--  <script>
+          function displayCart() {
+              var cartArray = PA_shoppingCart.listCart();
+              var output = "";
+              for (var i in cartArray) {
+                  output += "<li>"
+                      + cartArray[i].name
+                      + " "
+                      + " <input class='item-count' type='number' data-name='"
+                      + cartArray[i].name
+                      + "' value='" + cartArray[i].count + "' >"
+                      + cartArray[i].count
+                      + " "
+                      + "x" + cartArray[i].price
+                      + " = " + " " + "$" + cartArray[i].total
+                      + " <button class='plus-item' data-name='" +
+                      cartArray[i].name + "'>+</button>"
+                      + " <button class='subtract-item' data-name='"
+                      + cartArray[i].name + "'>-</button>"
+                      + "<button class='delete-item' data-name='"
+                      + cartArray[i].name + "'> X </button>"
+                      + "</li>"
+              }
+              $("#show-cart").html(output);
+              $("#count-cart").html(PA_shoppingCart.countCart())
+              $("#total-cart").html(PA_shoppingCart.totalCart());
+          }
+          PA_shoppingCart.loadCart();
+          displayCart();
+      </script> -->
+        <!-- <script>
+        var doc = new jsPDF();
+        var elementHandler = {
+            '#ignorePDF': function (element, renderer) {
+                return true;
+            }
+        };
+        var source = window.document.getElementsByTagName("body")[0];
+        doc.fromHTML(
+            source,
+            15,
+            15,
+            {
+                'width': 180, 'elementHandlers': elementHandler
+            });
+
+        doc.save("PlantProposal.pdf");
+    </script> -->
+
+        <script>
+            $(".add-to-cart").click(function (event) {
+                event.preventDefault();
+                var parent = $(this).attr("data-parent");
+                var grandparent = $(this).attr("data-grandparent");
+                var name = $(this).attr("data-name");
+                var price = Number($(this).attr("data-price"));
+
+                PA_shoppingCart.addItemToCart(grandparent, parent, name, price, 1);
+                displayCart();
+            });
+
+            $(".add-cart-percentage").click(function (event) {
+                event.preventDefault();
+                var parent = $(this).attr("data-parent");
+                var grandparent = $(this).attr("data-grandparent");
+                var name = $(this).attr("data-name");
+                var price = Number($(this).attr("data-price"));
+                var cartArray = PA_shoppingCart.listCart();
+                var totalCost = Number();
+                var percToAdd;
+
+                for (var i in cartArray) {
+                    if ((cartArray[i].grandparent == grandparent)) {
+                        totalCost += (cartArray[i].price * cartArray[i].count)
+                    }
+                }
+                percToAdd = totalCost * price;
+
+                PA_shoppingCart.addItemToCart(grandparent, parent, name, percToAdd, 1);
+                displayCart();
+            });
+
+
+            $(".add-total-cart-percentage").click(function (event) {
+                event.preventDefault();
+                var parent = $(this).attr("data-parent");
+                var grandparent = $(this).attr("data-grandparent");
+                var name = $(this).attr("data-name");
+                var price = Number($(this).attr("data-price"));
+                var cartArray = PA_shoppingCart.listCart();
+                var totalCost = Number();
+                var percToAdd;
+
+                for (var i in cartArray) {
+                    totalCost += (cartArray[i].price * cartArray[i].count)
+                }
+                percToAdd = totalCost * price;
+
+                PA_shoppingCart.addItemToCart(grandparent, parent, name, percToAdd, 1);
+                displayCart();
+            });
+
+            $("#clear-cart").click(function (event) {
+                PA_shoppingCart.clearCart();
+                displayCart();
+            });
+
+            $("#submit-cart").click(function (event) {
+                PA_shoppingCart.saveCart();
+                window.location.href = '/Submit-Cart'
+            });
+
+            $("#go-back").click(function (event) {
+                PA_shoppingCart.saveCart();
+                window.location.href = '/ShoppingCart'
+            });
+
+            function displayCart() {
+                var cartArray = PA_shoppingCart.listCart();
+                var output = "";
+                for (var i in cartArray) {
+                    output += "<li>"
+                        + cartArray[i].grandparent
+                        + "<br>"
+                        + cartArray[i].parent
+                        + "<br>"
+                        + cartArray[i].name
+                        + " "
+                        + " <input class='item-count' type='number' data-name='"
+                        + cartArray[i].name
+                        + "' value='" + cartArray[i].count + "' >"
+                        + " x " + cartArray[i].price
+                        + " = " + " " + "$" + cartArray[i].total
+                        + " <button class='plus-item' data-grandparent='" + cartArray[i].grandparent + "'data-parent='" + cartArray[i].parent + "'data-name='" + cartArray[i].name + "'>+</button>"
+                        + " <button class='subtract-item' data-name='"
+                        + cartArray[i].name + "'>-</button>"
+                        + "<button class='delete-item' data-name='"
+                        + cartArray[i].name + "'> X </button>"
+                        + "</li>"
+                }
+                $("#show-cart").html(output);
+                $("#count-cart").html(PA_shoppingCart.countCart())
+                $("#total-cart").html(PA_shoppingCart.totalCart());
+            }
+
+            $("#show-cart").on("click", ".delete-item", function (event) {
+                var parent = $(this).attr("data-parent");
+                var grandparent = $(this).attr("data-grandparent");
+                var name = $(this).attr("data-name");
+                var price = Number($(this).attr("data-price"));
+                PA_shoppingCart.removeItemFromCartAll(name);
+                displayCart();
+            });
+
+            $("#show-cart").on("click", ".subtract-item", function (event) {
+                var parent = $(this).attr("data-parent");
+                var grandparent = $(this).attr("data-grandparent");
+                var name = $(this).attr("data-name");
+                var price = Number($(this).attr("data-price"));
+                PA_shoppingCart.removeItemFromCart(name);
+                displayCart();
+            });
+
+            $("#show-cart").on("click", ".plus-item", function (event) {
+                var parent = $(this).attr("data-parent");
+                var grandparent = $(this).attr("data-grandparent");
+                var name = $(this).attr("data-name");
+                //var price = Number($(this).attr("data-price"));
+                PA_shoppingCart.addItemToCart(grandparent, parent, name, 0, 1);
+                displayCart();
+            });
+
+            $("#show-cart").on("change", ".item-count", function (event) {
+                var parent = $(this).attr("data-parent");
+                var grandparent = $(this).attr("data-grandparent");
+                var name = $(this).attr("data-name");
+                var price = Number($(this).attr("data-price"));
+                var count = Number($(this).val());
+                PA_shoppingCart.setCountForItem(name, count);
+                displayCart();
+            });
+
+            displayCart();
+
+
+
+        </script>
+    </div>
+</body>
+{% endblock %}
