@@ -1,27 +1,64 @@
 from flask import Flask, render_template, flash, redirect, url_for, session, logging, request
 from flask_mysqldb import MySQL
 from flask_wtf import FlaskForm
+from flask_sqlalchemy import SQLAlchemy
 from wtforms import StringField, PasswordField, BooleanField
 from wtforms.validators import InputRequired, Email, Length
 from flask_bootstrap import Bootstrap
 from passlib.hash import sha256_crypt
-from functools import wraps
+from functools32 import wraps
+from flask_admin import Admin, BaseView, expose
+from flask_admin.contrib.sqla import ModelView
 
 
 app = Flask(__name__)
 
-# Config MySQL
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'eripsa141'
-app.config['MYSQL_DB'] = 'plantapp'
-app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
-#init MySQL
-mysql = MySQL(app)
 
+#configure SQLAlchemy to connect to the db
 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:eripsa141@localhost/plantapp'
 app.config['SECRET_KEY'] = 'Thisissupposedtobesecret!'
 Bootstrap = Bootstrap(app)
+db = SQLAlchemy(app)
+admin = Admin(app) #setting up flask-admin instance of the app
+
+
+#create Models
+
+class Users(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	name = db.Column(db.String(50))
+	username = db.Column(db.String(15), unique=True)
+	email = db.Column(db.String(50), unique=True)
+	password = db.Column(db.String(80))
+
+admin.add_view(ModelView(Users, db.session)) #adds the Users table to the admin console.
+
+class Productcategories(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	category_name = db.Column(db.String(100))
+	parent_category_id = db.Column(db.Integer)
+
+
+admin.add_view(ModelView(Productcategories, db.session))
+
+class Product(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	name = db.Column(db.String(100))
+	price = db.Column(db.Integer)
+	parent_category_id = db.Column(db.Integer)
+
+admin.add_view(ModelView(Product, db.session))
+
+class productView(BaseView):
+	myUser = session.query(Users).all()
+	form_columns = ['name','price']
+	@expose('/')
+	def index(self):
+		return self.render('admin/products.html', myUser=myUser)
+
+
+admin.add_view(productView(name='Products and Services', endpoint='products'))
 
 	#Login Form Class
 class LoginForm(FlaskForm):
@@ -48,37 +85,23 @@ def login():
 	form = LoginForm()
 
 	if form.validate_on_submit():
+		#SQLAlchemy method
 		username = request.form['username']
 		password_candidate = request.form['password']
-				
-		#return '<h1>' + form.username.data + ' ' + form.password.data + '</h1>'
-
-		#Create Cursor
-		cur = mysql.connection.cursor()
-
-		#Get user by username
-		result = cur.execute("SELECT * FROM users WHERE username = %s", [username])
-
-		if result > 0:
-			#Get stored hash/password
-			data = cur.fetchone()
-			password = data['password']
-
-			#Compare the Passwords
+		user = Users.query.filter_by(username=form.username.data).first()
+		if user: 
+			password = user.password
 			if sha256_crypt.verify(password_candidate, password):
 				#password Passed
 				session['logged in'] = True
 				session['username'] = username
 
 				flash('You are now logged in', 'success')
-				return redirect(url_for('dashboard'))
+				return redirect(url_for('dashboard'));
 				
 			else:
 				error = 'Invalid login'
 				return render_template('login.html', error=error, form=form)
-
-			#close connection
-			cur.close()
 		else:
 			error = 'Username not found'
 			return render_template('login.html', error=error, form=form)
@@ -93,27 +116,19 @@ def signup():
 	form = RegisterForm()
 
 	if form.validate_on_submit():
-		name = form.name.data
-		username = form.username.data
-		email = form.email.data
-		password = sha256_crypt.encrypt(str(form.password.data))
 
-		# Create the Cursor
-		cur = mysql.connection.cursor()
-
-		#execute query
-		cur.execute("INSERT INTO users(name,username, email, password) VALUES(%s,%s, %s, %s)", (name, username, email, password))
-
-		#commit to DB
-		mysql.connection.commit()
-
-		#close connection
-		cur.close()
+		new_user = Users(
+			name = form.name.data,
+			username = form.username.data,
+			email = form.email.data,
+			password = sha256_crypt.encrypt(str(form.password.data))
+		)
+		db.session.add(new_user)
+		db.session.commit()
 
 		flash('You are now registerd and can login', 'success')
 
 		redirect(url_for('index'))
-		#return '<h1>' + form.username.data + ' ' + form.password.data + ' ' + form.email.data + '</h1>'
 
 	return render_template ('signup.html', form=form)
 
