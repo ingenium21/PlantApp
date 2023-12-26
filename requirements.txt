@@ -1,4 +1,4 @@
-Flask==1.0.0
+Flask==2.2.5
 werkzeug>=0.15.3
 flask-mysqldb==0.2.0
 flask-wtf==0.14.2
